@@ -1,5 +1,5 @@
 # neverwood
-Work-in-progress 2D roguelike.
+Work-in-progress 2D roguelike developed in the Godot engine.
 
 Currently implemented:
 * Keyboard and mouse controls for moving and attacking
