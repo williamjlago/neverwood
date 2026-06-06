@@ -1,4 +1,6 @@
 # neverwood
 Work-in-progress 2D roguelike.
 
-<video src="https://i.imgur.com/plxYAMM.mp4" width="320" height="240" controls></video>
+<p align="center" width="100%">
+<video src="https://i.imgur.com/plxYAMM.mp4" width="80%" controls></video>
+</p>
