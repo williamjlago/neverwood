@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://o3v0d3f7f3d3"]
+
+[ext_resource type="Texture2D" uid="uid://b7we2fv3y2erv" path="res://assets/ow/ow_fighter.png" id="1_fjrip"]
+[ext_resource type="Script" uid="uid://krkygf6d1ct2" path="res://scripts/player.gd" id="2_smehm"]
+[ext_resource type="Texture2D" uid="uid://c0cwitpklq1s4" path="res://assets/ui/player_border.png" id="3_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://ddyy1itva3rvk" path="res://assets/light_gradient.png" id="4_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://cap5jgh5lod7j" path="res://assets/ui/ow_health_bg.png" id="5_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://joijm2rocp8a" path="res://assets/ui/ow_health_fill_green.png" id="6_3v2ag"]
+[ext_resource type="Script" uid="uid://dtijnt4aorpui" path="res://scripts/ow_healthbar.gd" id="7_jej6c"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_04mpi"]
+light_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukw2x"]
+atlas = ExtResource("1_fjrip")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivaed"]
+atlas = ExtResource("1_fjrip")
+region = Rect2(0, 24, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ccit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukw2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivaed")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.5
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_08r5q"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yvfva"]
+light_mode = 1
+
+[node name="Player" type="AnimatedSprite2D" unique_id=1448361089]
+visibility_layer = 2
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_04mpi")
+sprite_frames = SubResource("SpriteFrames_4ccit")
+autoplay = "default"
+frame_progress = 0.31459096
+centered = false
+offset = Vector2(0, -8)
+script = ExtResource("2_smehm")
+max_health = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1738080397]
+material = SubResource("CanvasItemMaterial_08r5q")
+texture = ExtResource("3_ur7pv")
+centered = false
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1911229584]
+position = Vector2(8, 8)
+color = Color(1.8247963, 1.0719869, 0.666628, 0.7529412)
+shadow_enabled = true
+texture = ExtResource("4_y4r1p")
+texture_scale = 0.9
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=378600890]
+texture_filter = 1
+position = Vector2(8, 8)
+zoom = Vector2(2, 2)
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="." unique_id=1552111989]
+visible = false
+z_index = 2
+material = SubResource("CanvasItemMaterial_yvfva")
+offset_left = 14.0
+offset_right = 16.0
+offset_bottom = 16.0
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("5_d2wvv")
+texture_progress = ExtResource("6_3v2ag")
+script = ExtResource("7_jej6c")
