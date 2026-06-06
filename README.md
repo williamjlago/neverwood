@@ -3,7 +3,7 @@ Work-in-progress 2D roguelike.
 
 Currently implemented:
 * Keyboard and mouse controls for moving and attacking
-* Basic combat
+* Basic combat and enemy AI
 * Dynamic lighting and fog-of-war
 * Procedurally generated enemy spawns
 
