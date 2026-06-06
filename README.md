@@ -12,6 +12,7 @@ Planned features:
 * Experience and leveling up
 * Robust stat system for players and enemies
 * Character classes with distinct abilities
+* Many more enemy types with unique stats and abilities
 * A full story campaign with many more maps to explore
 
 https://github.com/user-attachments/assets/2523955c-5073-431a-ab14-ccf6719a9cc5
